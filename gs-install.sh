@@ -261,11 +261,11 @@ else
             fi
             
             if [ "$GS_DEV" != "" ]; then
-                sudo git clone -b "${GS_DEV}" https://github.com/vmstan/gravity-sync.git /etc/gravity-sync/.gs
+                sudo git clone -b "${GS_DEV}" https://github.com/harmanhobbit/gravity-sync.git /etc/gravity-sync/.gs
                 sudo touch /etc/gravity-sync/.gs/dev
                 echo -e "BRANCH='origin/$GS_DEV'" | sudo tee /etc/gravity-sync/.gs/dev
             else
-                sudo git clone https://github.com/vmstan/gravity-sync.git /etc/gravity-sync/.gs
+                sudo git clone https://github.com/harmanhobbit/gravity-sync.git /etc/gravity-sync/.gs
             fi
             sudo cp /etc/gravity-sync/.gs/gravity-sync /usr/local/bin
             
