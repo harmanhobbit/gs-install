@@ -172,7 +172,7 @@ if [ "$GS_DOCKER" != "1" ]; then
     else
         if hash docker 2>/dev/null; then
             echo -e "${GOOD} Docker installation has been detected"
-            FTLCHECK=$(sudo docker container ls | grep 'pihole/pihole')
+            FTLCHECK=$(sudo docker container ls | grep 'ghcr.io/pi-hole/pihole:latest')
                 if [ "$FTLCHECK" != "" ]
                 then
                     echo -e "${GOOD} Docker container of Pi-hole has been detected"
